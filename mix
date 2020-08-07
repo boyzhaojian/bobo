@@ -201,7 +201,7 @@ final, 🕹 FINAL
 ;force_sni_domain_name = false
 ;empty_sni_enabled = false
 # cookie获取专用,仅获取cookie时使用,不用的时候最前面加个;
-hostname = api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com, *.tiktokv.com, *.tiktokcdn.com
+hostname = api*.tiktokv.com, api*.musical.ly, api*.amemv.com, aweme*.snssdk.com, *.tiktokv.com, *.tiktokcdn.com,*.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com,
 # 以下为lhie1证书，如果不需要用到他的证书，可以换成自己的证书。具体方法请自行Google。
 
 passphrase = 4B676386

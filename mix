@@ -264,6 +264,7 @@ final, 🕹 FINAL
 ^https?:\/\/s\.youtube\.com\/api\/stats\/watchtime?adformat url reject-img
 ^https?:\/\/s0\.2mdn\.net\/ads\/ url reject-img
 ^https?:\/\/stats\.tubemogul\.com\/stats\/ url reject-img
+
 [mitm]
 hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com,
 

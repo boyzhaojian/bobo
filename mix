@@ -2,44 +2,11 @@
 
 [general]
 server_check_url= http://www.qualcomm.cn/generate_204
-;geo_location_checker=http://extreme-ip-lookup.com/json/, https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample-location-with-script.js
 
 geo_location_checker=http://ip-api.com/json/?lang=zh-CN, https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/IP_API.js
 
-;network_check_url=http://bing.com/
-;dns_exclusion_list=*.qq.com, qq.com
-;ssid_suspended_list=LINK_22E174, LINK_22E175
-;udp_whitelist=53, 123, 1900, 80-443
-;excluded_routes= 192.168.0.0/16, 172.16.0.0/12, 100.64.0.0/10, 10.0.0.0/8
-;icmp_auto_reply=true
 [task_local]
-30 7 * * * weather_pro.js
-#喜马拉雅
-6 0 * * * nzw9314/chavyleung/ximalaya/ximalaya.js 
-# 微博超话 By @NavePnow
-3 0 * * * nzw9314/NavePnow/Scripts/weibo/checkin_qx.js
-# 疫情查看 (By @Dachaw)
-0 9 * * * nzw9314/Script/nCoV.js
-# 网易云音乐
-3 0 * * * nzw9314/chavyleung/neteasemusic/quanx/neteasemusic.js
-# 人人视频
-4 0 * * * nzw9314/chavyleung/rrtv/rrtv.js
-# V2EX
-5 0 * * * nzw9314/chavyleung/v2ex/quanx/v2ex.js
-# 中国移动
-7 0 * * * nzw9314/chavyleung/10086/10086.js
-# 京东
-1,2,3 0 * * * nzw9314/NobyDa/JD-DailyBonus/JD_DailyBonus.js
-# 贴吧
-1,2,3 0 * * * nzw9314/NobyDa/QuantumultX/TieBa-DailyBonus/TieBa_DailyBonus_QX.js
-# 52破解
-2 0 * * * nzw9314/NobyDa/QuantumultX/52pojie-DailyBonus/52pojie_DailyBonus_QX.js
-# 招行信用卡(公众号) (By @iNotification)
-5 0 * * * nzw9314/Script/cmbchina.js
-# 京东到家 (By @barrymchen)
-5 0 * * * nzw9314/Script/jddj.js
-# 活动抽奖 (By @makexp)
-5 0 * * * nzw9314/Script/hdcj.js
+
 [dns]
 server=114.114.114.114
 server=202.141.176.93 
@@ -67,14 +34,6 @@ server=/*.127.net/119.29.29.29
 server=/*.netease.com/119.29.29.29
 server=/*.mi.com/119.29.29.29
 server=/*.xiaomi.com/119.29.29.29
-;server=/*testflight.apple.com/23.76.66.98
-;server=8.8.8.8
-;server=/example1.com/8.8.4.4
-;server=/*.example2.com/223.5.5.5
-;server=/example4.com/[2001:4860:4860::8888]:53
-;address=/example5.com/192.168.16.18
-;address=/example6.com/[2001:8d3:8d3:8d3:8d3:8d3:8d3:8d3]
-
 
 #
 # static policy points to the server in candidates you manually selected.
@@ -121,14 +80,6 @@ static=🇭🇰 Hong Kong, proxy, direct, img-url=https://raw.githubusercontent.
 static=🇺🇸 United States, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png
 static=🕹 FINAL, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Final.png
 static=🙈 网易云音乐, direct, 🎧 解锁网易云音乐1, 🎧 解锁网易云音乐2, 🎧 解锁网易云音乐3, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Netease_Music_Unlock.png
-;static=🦒 可用性策略, proxy, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
-;ssid=🐳 SSID策略, proxy, proxy, 一般路由器: proxy, 翻墙路由器: direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/SSID.png
-
-
-;static=policy-name-1, Sample-A, Sample-B, Sample-C
-;available=policy-name-2, Sample-A, Sample-B, Sample-C
-;round-robin=policy-name-3, Sample-A, Sample-B, Sample-C
-;ssid=policy-name-4, Sample-A, Sample-B, LINK_22E171:Sample-B, LINK_22E172:Sample-C
 
 #
 # Params ”tag“ and ”enabled“ are optional.
@@ -141,7 +92,6 @@ static=🙈 网易云音乐, direct, 🎧 解锁网易云音乐1, 🎧 解锁网
 
 #一键连订阅节点以及网易云解说节点
 http://zhonglelequn.tk/ZGVtbw==, tag=网易云&一键连, enabled=true
-
 
 [filter_remote]
 https://raw.githubusercontent.com/ConnersHua/Profiles/master/Quantumult/X/Filter/Advertising.list, tag=🚫 广告拦截, force-policy=🚫 广告拦截, enabled=true
@@ -174,6 +124,9 @@ https://raw.githubusercontent.com/Hedilict/QuantumultX/master/Js_Local_WorkingCo
 
 [server_local]
 #网易云音乐
+
+vmess=35.201.137.45:4620,method=chacha20-poly1305, password=be7c6af0-d3b8-4c16-abef-c633fa5495c7, fast-open=false, udp-relay=false, tag=V2ray-20
+
 http=106.52.127.72:19951, fast-open=false, udp-relay=false, tag=🎧 解锁网易云音乐1
 shadowsocks=music.desperadoj.com:30003, method=aes-128-gcm, password=desperadoj.com, fast-open=false, udp-relay=false, tag=🎧 解锁网易云音乐2
 http=111.67.197.245:10086, over-tls=false, fast-open=false, udp-relay=false, tag=🎧 解锁网易云音乐3
@@ -181,27 +134,6 @@ http=111.67.197.245:10086, over-tls=false, fast-open=false, udp-relay=false, tag
 # 一键连
 # http=a1.ap.fastqvpn.com:29980, username=282305298897567744, password=193b68b8-7d11-4649-ab0f-92bc1ecba4fc, over-tls=true, tls-verification=true,tls-host=a1.ap.fastqvpn.com, fast-open=false, udp-relay=false, tag=一键连新加坡01
 
-;http=a2.ap.fastqvpn.com:29980, username=287859821716176896, password=f26adb930b144834bc45efa0d6380c14, over-tls=true, tls-verification=true, tls-host=, fast-open=false, udp-relay=false, tag=https1
-
-;http=a1.ap.fastqvpn.com:29980, username=287860312512659456, password=44de0cec7f1049b99f8ea4cca4d94660, over-tls=true, tls-verification=true, tls-host=, fast-open=false, udp-relay=false, tag=https2
-
-;http=a1.ap.fastqvpn.com:29980, username=287860522747953152, password=63a8d7ce49b548dc97ff29c2d0be1533, over-tls=true, tls-verification=true, tls-host=, fast-open=false, udp-relay=false, tag=https3
-
-;http=a1.ap.fastqvpn.com:29980, username=285200713594699776, password=2abbbf8f1b024a17b4cd95e1d149e575, over-tls=true, tls-verification=true, tls-host=, fast-open=false, udp-relay=false, tag=https4
-
-;shadowsocks=a.example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, server_check_url=http://www.apple.com/generate_204, tag=Sample-A
-;shadowsocks=b.example.com:80, method=chacha20, password=pwd, obfs=http, obfs-host=bing.com, obfs-uri=/resource/file, fast-open=false, udp-relay=false, tag=Sample-B
-;shadowsocks=c.example.com:443, method=chacha20, password=pwd, obfs=tls, obfs-host=bing.com, fast-open=false, udp-relay=false, tag=Sample-C
-;shadowsocks=d.example.com:80, method=chacha20, password=pwd, obfs=ws, obfs-host=bing.com, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=Sample-D
-;shadowsocks=e.example.com:80, method=chacha20, password=pwd, obfs=ws, obfs-host=bing.com, fast-open=false, udp-relay=false, tag=Sample-E
-;shadowsocks=f.example.com:443, method=chacha20, password=pwd, obfs=wss, obfs-host=bing.com, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=Sample-F
-;shadowsocks=g.example.com:443, method=chacha20, password=pwd, ssr-protocol=auth_chain_b, ssr-protocol-param=def, obfs=tls1.2_ticket_fastauth, obfs-host=bing.com, tag=Sample-G
-;vmess=example.com:80, method=aes-128-gcm, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, fast-open=false, udp-relay=false, tag=vmess-02
-;vmess=example.com:443, method=none, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=over-tls, fast-open=false, udp-relay=false, tag=vmess-tls
-;vmess=example.com:80, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=ws, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws
-;vmess=example.com:443, method=chacha20-poly1305, password=23ad6b10-8d1a-40f7-8ad0-e3e35cd32291, obfs=wss, obfs-uri=/ws, fast-open=false, udp-relay=false, tag=vmess-ws-tls
-;http=example.com:80, username=name, password=pwd, fast-open=false, udp-relay=false, tag=http
-;http=example.com:443, username=name, password=pwd, over-tls=true, tls-verification=true, tls-host=example.com, fast-open=
 [filter_local]
 
 
@@ -243,13 +175,6 @@ host-suffix, twnextdigital.com, 🦑 蘋果の新聞
 host-suffix, nxtdig.com.tw, 🦑 蘋果の新聞
 host-suffix, branch.io, 🦑 蘋果の新聞
 
-#📡 华文电视Pro-广告拦截
-HOST-SUFFIX, mob.com, 📡 华文电视Pro
-HOST-SUFFIX, 5itv.tv, 📡 华文电视Pro
-HOST-SUFFIX, ocnttv.com, 📡 华文电视Pro
-USER-AGENT, HWTVMobile*, 📡 华文电视Pro
-
-
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
 ip-cidr, 172.16.0.0/12, direct
@@ -266,8 +191,6 @@ final, 🕹 FINAL
 (?<=(carrier|sys)_region=)CN url 307 KR
 (?<=(carrier|account|sys|sim)_region=)cn url 307 in
 (?<=version_code=)\d{1,}.\d{1}\.\d{1} url 307 8.4.0
-
-
 
 
 [mitm]

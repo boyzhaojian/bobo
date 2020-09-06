@@ -115,7 +115,7 @@ vmess=35.201.137.45:4619,method=chacha20-poly1305, password=be7c6af0-d3b8-4c16-a
 
 vmess=35.201.137.45:4618,method=chacha20-poly1305, password=be7c6af0-d3b8-4c16-abef-c633fa5495c7, fast-open=false, udp-relay=false, tag=V2ray-18
 
-vmess=shiny-base-92ee.boyzhaojian.workers.dev,method=chacha20-poly1305, password=7e037df8-30f1-4189-91e1-eb1c7e9edde7, fast-open=false, udp-relay=false, tag=V2ray-IBM
+vmess=shiny-base-92ee.boyzhaojian.workers.dev:443,method=chacha20-poly1305, password=7e037df8-30f1-4189-91e1-eb1c7e9edde7, fast-open=false, udp-relay=false, tag=V2ray-IBM
 
 
 [filter_local]

@@ -117,6 +117,7 @@ vmess=35.201.137.45:4618,method=chacha20-poly1305, password=be7c6af0-d3b8-4c16-a
 
 ;vmess=shiny-base-92ee.boyzhaojian.workers.dev:443,method=chacha20-poly1305, password=7e037df8-30f1-4189-91e1-eb1c7e9edde7,obfs=wss, obfs-uri=/2iHJ7NP82vT4dNmv, fast-open=false, udp-relay=false, tag=V2ray-IBM
 vmess=starkbobi.us-south.cf.appdomain.cloud:443,method=chacha20-poly1305, password=d395fbf3-5081-4d60-bc9f-48e6591396c5,obfs=wss, obfs-uri=/FSVzpBg8fwkStdSk, fast-open=false, udp-relay=false, tag=V2ray-IBM3
+vmess=shiny-base-92ee.boyzhaojian.workers.dev:443,method=chacha20-poly1305, password=d395fbf3-5081-4d60-bc9f-48e6591396c5,obfs=wss, obfs-uri=/FSVzpBg8fwkStdSk, fast-open=false, udp-relay=false, tag=V2ray-IBM3-domian
 
 [filter_local]
 ip-cidr, 10.0.0.0/8, direct

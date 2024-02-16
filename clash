@@ -9,6 +9,7 @@ proxies:
   - {name: S2, server: s2.starkbobo.eu.org, port: 443, client-fingerprint: chrome, type: vless, uuid: 1bed2040-7561-49de-94c8-4fec22f352e8, tls: true, tfo: false, servername: s2.starkbobo.eu.org, flow: xtls-rprx-vision, skip-cert-verify: true, udp: true}
   - {name: U4, server: u4.starkbobo.eu.org, port: 443, client-fingerprint: chrome, type: vless, uuid: 12d4070d-21d1-4326-86cd-f95f6dbc4ca8, tls: true, tfo: false, servername: u4.starkbobo.eu.org, flow: xtls-rprx-vision, skip-cert-verify: true, udp: true}
   - {name: S2-cdn, server: 104.17.106.104, port: 443, client-fingerprint: chrome, type: vless, uuid: 1bed2040-7561-49de-94c8-4fec22f352e8, tls: true, tfo: false, servername: s2.starkbobo.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /ubgfws, headers: {Host: s2.starkbobo.eu.org}}, udp: true}
+  - {name: U2-cdn, server: 162.159.15.207, port: 443, client-fingerprint: chrome, type: vless, uuid: f18525c5-ec86-4cec-a76a-1edaa4d8ed81, tls: true, tfo: false, servername: u2.starkbobo.eu.org, skip-cert-verify: true, network: ws, ws-opts: {path: /bjfdws, headers: {Host: u2.starkbobo.eu.org}}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -19,6 +20,7 @@ proxy-groups:
       - S2
       - U4
       - S2-cdn
+      - U2-cdn
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -28,6 +30,7 @@ proxy-groups:
       - S2
       - U4
       - S2-cdn
+      - U2-cdn
   - name: 🎥 NETFLIX
     type: select
     proxies:

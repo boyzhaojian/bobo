@@ -1,9 +1,23 @@
 port: 7890
 socks-port: 7891
+mixed-port: 7892
 allow-lan: true
-mode: Rule
+mode: rule
 log-level: info
-external-controller: :9090
+external-controller: '0.0.0.0:9090'
+clash-for-android:
+    append-system-dns: false
+profile:
+    tracing: true
+dns:
+    enable: true
+    ipv6: false
+    default-nameserver: [223.5.5.5, 119.29.29.29]
+    fake-ip-range: 198.18.0.1/16
+    use-hosts: true
+    nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
+    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://1.0.0.1:853', 'tls://8.8.4.4:853']
+    fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
   - {name: K7, server: k7.starkbobo.eu.org, port: 2381, client-fingerprint: chrome, type: vless, uuid: cfe57ec0-62ad-450e-aa3a-8bdf62062108, tls: true, tfo: false, servername: k7.starkbobo.eu.org, flow: xtls-rprx-vision, skip-cert-verify: true, udp: true}
   - {name: S2, server: s2.starkbobo.eu.org, port: 443, client-fingerprint: chrome, type: vless, uuid: 1bed2040-7561-49de-94c8-4fec22f352e8, tls: true, tfo: false, servername: s2.starkbobo.eu.org, flow: xtls-rprx-vision, skip-cert-verify: true, udp: true}
